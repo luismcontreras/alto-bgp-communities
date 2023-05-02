@@ -55,13 +55,12 @@ networks, this document specifies an extension to {{?RFC7285}} by defining a new
 
 # BGP Communities Overview
 
-A BGP Community, as per {{?RFC1997}}, is a BGP attribute that is used to group destinations.
-
-Standard BGP Communities are represented as 32-bit integer numbers. It is typically written as the combination of two 16-bit integer numbers
+A BGP Community, as per {{?RFC1997}}, is a BGP attribute that is used to group destinations. 
+It is represented as a 32-bit integer number, typically written as the combination of two 16-bit integer numbers
 separated by a colon. The first number is usually the Autonomous System (AS) number, while the second one is determined by the 
 service provider according to some internal logic. In order to support 4-octet ASNs, {{?RFC8092}} specifies a BGP Large Communities 
 attribute. Another form of BGP communities is defined in the BGP Extended Communities Attribute {{?RFC4360}}. IP prefixes can be part of 
-distinct BGP Communities, with different purposes, typically for influencing the traffic reaching the particular prefixes of a community.
+distinct BGP Communities, with different purposes, typically to influence the traffic reaching the particular prefixes of a community.
 
 The BGP Communities attribute is useful for applying policies of applicability to a certain set of prefixes, grouped as a community 
 at the criteria of the service provider. For instance, BGP Communities can be useful for indicating local preferences 
@@ -77,12 +76,12 @@ Typically, they are used by administratively-defined filters for applying polici
 the associated destinations.
 
 On the other hand, the ALTO Protocol is based on IP prefixes. When considering queries to IP prefixes, it could be the case that those 
-queries apply for IP addresses associated to the same topological element.  This is for instance the case of aggregation nodes in the 
-Network (such as BNG or PGW) which have associated a number of IP prefixes (that can evolve along the time). The same response will be 
+queries apply to IP addresses associated to the same topological element.  This is for instance the case of aggregation nodes in the 
+network (such as BNG or PGW), which have associated a number of IP prefixes (that can evolve along the time). The same response will be 
 obtained from an ALTO server for all the prefixes associated with such a node, since the topological information is essentially the same.
 
 For assisting an efficient usage of ALTO resources in this kind of situations, the usage of BGP Communities simplifies the process by 
-reducing the number of queries to ALTO server, but also by smoothly absorbing the modification of prefixes for a given aggregation node.
+reducing the number of queries to the ALTO server, but also by smoothly absorbing the modification of prefixes for a given aggregation node.
 
 ## Usage of BGP Communities in ALTO
 
