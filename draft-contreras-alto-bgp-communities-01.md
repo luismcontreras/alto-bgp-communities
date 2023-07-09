@@ -110,4 +110,4 @@ To be provided.
 
 # Acknowledgements
 
-The author thanks (in alphabetical order) Med Boucadair and Jordi Ros-Giralt for their review, comments and suggestions to make this document and solution more complete.
+The author thanks Med Boucadair for his review, comments and suggestions to make this document and solution more complete.
